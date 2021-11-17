@@ -1,0 +1,7 @@
+.div{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-size: smaller;
+    border-radius: 10px;
+}
