@@ -27,8 +27,9 @@ const Index = () => {
     
 
     const getData = async () => {
+
         try{
-                await axios.all(endpoints.map((endpoint) =>
+            await axios.all(endpoints.map((endpoint) =>
                 axios.get(endpoint))).then(
                     axios.spread((appleData, generalData, sportData) => {
                         console.log({ appleData, generalData, sportData});
@@ -38,7 +39,7 @@ const Index = () => {
                         setSportData(sortByDate(sportData.data.articles))
                         setIsLoading(false)
                 })
-              );
+            );
         } catch (error) {
             console.log(error)
             setIsError(error)
