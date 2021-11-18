@@ -6,16 +6,31 @@
   
   .navigationBar li {
     list-style: none;
-    text-decoration: none;
-    width: fit-content;
+    /* width: fit-content; */
+    width: 5rem;
+    height: 5rem;
     font-size: 14px;
     line-height: 22px;
     text-transform: uppercase;
     color: #555;
   }
+
   .navigationBar li:hover {
     border-bottom: 2px solid darkgray;
     cursor: pointer;
+  }
+
+  .link{
+    text-decoration: none;
+    width: 5rem;
+    height: 5rem;
+    padding-top: 0.5em;
+  }
+
+  .img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
   }
   
   .navigationBar .active, .navigationBar .active:hover{

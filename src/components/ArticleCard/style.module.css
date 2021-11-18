@@ -5,3 +5,20 @@
     font-size: smaller;
     border-radius: 10px;
 }
+
+.link{
+    text-decoration: none;
+}
+
+.card{
+    border-radius: 10px;
+}
+
+.title{
+    text-align: left;
+}
+
+.author{
+    text-align: left;
+    padding-top: 1em;
+}

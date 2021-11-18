@@ -28,7 +28,8 @@ const HomePage = (props) => {
             </div>
             <div>
                 {props.title}
-                <input type="text" placeholder="Search" value={input} onChange={(event)=>handleInputChange(event)}></input>
+                <input className={styles.searchTerm} type="text" placeholder="Search News" value={input} onChange={(event)=>handleInputChange(event)}></input>
+                <div className={styles.title}>{props.title}</div>
                 <div className={styles.articlesWrapper}>
                     {articles.map((article, index)=> {
                         return(

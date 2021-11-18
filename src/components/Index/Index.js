@@ -24,8 +24,6 @@ const Index = () => {
         'https://newsapi.org/v2/top-headlines?category=sport&from=2021-11-12&sortBy=popularity&apiKey=' + process.env.REACT_APP_API_KEY
     ];
     
-    
-
     const getData = async () => {
 
         try{
