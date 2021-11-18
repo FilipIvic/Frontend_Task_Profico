@@ -7,6 +7,7 @@ import {
 
 import HomePage from '../HomePage/HomePage'
 import ArticlePage from '../ArticlePage/ArticlePage'
+import Loading from '../Loading/Loading'
 
 const Index = () => {  
 
@@ -63,20 +64,20 @@ const Index = () => {
             <Router>
                 <Routes>
                     <Route exact path="/" element={isError ? <div>Check internet Connection</div> :
-                        isLoading ? <div>Loading</div> :
+                        isLoading ? <Loading></Loading> :
                         <HomePage data={data} link="" title="Home">{console.log(data)}</HomePage>}>
                     </Route>
                     <Route path={"/:articleTitle"} element={isError ? <div>Check internet Connection</div> :
-                        isLoading ? <div>Loading</div> :
+                        isLoading ? <Loading></Loading> :
                         <ArticlePage data={data}></ArticlePage>}>
                     </Route>
 
                     <Route exact path="/general" element={isError ? <div>Check internet Connection</div> :
-                        isLoading ? <div>Loading</div> :
+                        isLoading ? <Loading></Loading> :
                         <HomePage data={generalData} link="/general" title="General">{console.log(generalData)}</HomePage>}>
                     </Route> 
                     <Route path={"/general/:articleTitle"} element={isError ? <div>Check internet Connection</div> :
-                        isLoading ? <div>Loading</div> :
+                        isLoading ? <Loading></Loading> :
                         <ArticlePage data={generalData}></ArticlePage>}>
                     </Route>
                 </Routes>

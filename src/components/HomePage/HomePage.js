@@ -58,32 +58,3 @@ const HomePage = (props) => {
     }
     
 export default HomePage
-
-// return (
-//     <div className={styles.articlesContainer}>
-//         Home Page
-//         <div className={styles.articlesColumn}>
-//             <NavigationHeader title={props.title}></NavigationHeader>
-//         </div>
-//         <div>
-//             {props.title}
-//             <input type="text" placeholder="Search" value={input} onChange={(event)=>handleInputChange(event)}></input>
-//             <div className={styles.articlesWrapper}>
-//                 {isError ? <div>Check internet Connection</div> :
-//                 isLoading ? <div>Loading</div> :
-//                 articles.map((article, index) => {
-//                     return(
-//                         <div className={styles.articleCard} key={index}>
-//                             <ArticleCard article={article} link={props.link}></ArticleCard> 
-//                         </div>
-//                     )
-//                 })}
-//             </div>
-//         </div>
-//         <div className={styles.articlesColumn}>
-//             <div className={styles.articleCard}>
-//                 AAAAA
-//             </div>
-//         </div>
-//     </div>  
-//   );
