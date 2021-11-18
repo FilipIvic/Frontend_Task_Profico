@@ -1,10 +1,30 @@
+.container{
+    background-color: #f2f4f8;
+    padding: 0rem 5rem;
+}
+
+.headerContainer{
+    padding: 0rem 4rem;
+}
+
+.header{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 1rem 1rem;
+    border-bottom: 2px solid #ebeaed;
+}
+
+.logo{
+    width: 15rem;
+    border-radius: 10px;
+}
+
 .articlesContainer{
     display: grid;
     grid-template-columns: 1fr 7fr 2fr;
-    padding: 0rem 2rem;
+    padding: 1.5rem 2rem;
     background-color: #f2f4f8;
-    border-color: red;
-    border-style: solid;
 }
 
 .searchTerm {
@@ -18,23 +38,25 @@
   }
   
   .searchTerm:focus{
-    color: #00B4CC;
+    color: black;
 }
   
 .title{
     text-align: left;
+    font-weight: 800;
+    font-size: 1.5rem;
   }
 
 .articlesColumn{
-    border-color: green;
-    border-style: solid;
+    display: flex;
+    
 }
 
 .articlesColumn3{
-    border-color: green;
-    border-style: solid;
-
-    max-height: 600px;
+    padding: 2rem;
+    display: flex;
+    justify-content:center;
+    max-height: 400px;
     overflow-y: scroll;
 }
 
@@ -46,9 +68,6 @@
     justify-items: center;
     margin-top: 1rem;
     font-size:small;
-
-    border-color: blue;
-    border-style: solid;
 }
 
 .articleCard{
@@ -61,8 +80,6 @@
     position: relative;
     border-radius: 10px;
     transition: 0.2s ease; */
-    border-color: yellow;
-    border-style: solid;
 }
 
 /* @media screen and (max-width: 1000px){

@@ -12,13 +12,28 @@
 
 .card{
     border-radius: 10px;
+    filter: brightness(95%);
+}
+
+.card:hover {
+    cursor: pointer;
+    filter: brightness(100%);
+  }
+
+.category{
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 10px;
 }
 
 .title{
     text-align: left;
+    padding-top: 0.5em;
+    font-size: 15px;
 }
 
 .author{
     text-align: left;
-    padding-top: 1em;
+    padding-top: 0.5em;
+    font-size: 12px;
 }

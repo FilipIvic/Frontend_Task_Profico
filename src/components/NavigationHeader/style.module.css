@@ -1,6 +1,5 @@
 .navigationBar {
     display: flex;
-    justify-content: space-evenly;
     flex-flow: column;
   }
   
@@ -9,14 +8,11 @@
     /* width: fit-content; */
     width: 5rem;
     height: 5rem;
-    font-size: 14px;
-    line-height: 22px;
-    text-transform: uppercase;
-    color: #555;
+    border-radius:10px
   }
 
   .navigationBar li:hover {
-    border-bottom: 2px solid darkgray;
+    border: 1px solid #787a7a;
     cursor: pointer;
   }
 
@@ -31,8 +27,4 @@
     width: 5rem;
     height: 5rem;
     border-radius: 10px;
-  }
-  
-  .navigationBar .active, .navigationBar .active:hover{
-    border-bottom: 2px solid black;
   }
