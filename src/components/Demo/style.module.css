@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #bb1e1e;
+    height: 3.5rem; 
+}
+
+.title{
+    padding-left: 13rem;
+    color: #fefffe;
+    font-size: 18px;
+}
+
+.text{
+    color: #fefffe;
+    font-size: 13px;
+    margin-left: -25rem;
+}

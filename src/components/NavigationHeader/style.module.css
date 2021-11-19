@@ -5,7 +5,6 @@
   
   .navigationBar li {
     list-style: none;
-    /* width: fit-content; */
     width: 5rem;
     height: 5rem;
     border-radius:10px

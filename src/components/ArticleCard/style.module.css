@@ -37,3 +37,18 @@
     padding-top: 0.5em;
     font-size: 12px;
 }
+
+.form{
+    position: absolute;
+    left: 13.5rem;
+    top: 10.5rem;
+    text-align: right;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.button{
+    text-align: right;
+    z-index: 2;
+    border-radius: 10px;
+}

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React from "react"
 import { useParams } from 'react-router-dom'
 
 import Article from '../Article/Article'
@@ -6,11 +6,6 @@ import Article from '../Article/Article'
 const ArticlePage = (props) => {  
 
     const params = useParams()
-
-    useEffect(() => {
-        console.log("ArticlePage: ComponentDidMount()")
-        // getData(props.api)
-    },[])
 
     return (
           <div>      
