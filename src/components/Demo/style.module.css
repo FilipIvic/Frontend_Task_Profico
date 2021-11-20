@@ -18,3 +18,9 @@
     font-size: 13px;
     margin-left: -25rem;
 }
+
+@media screen and (max-width: 768px){
+    .text{
+        display:none;
+    }
+}

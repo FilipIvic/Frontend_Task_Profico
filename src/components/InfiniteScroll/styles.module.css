@@ -1,9 +1,28 @@
-.div{
-    color: blue;
-    height: 100px;
-    text-align: center;
+.container{
+    border-radius: 10px;
+    background: white;
+}
+
+.newsContainer{
+    padding: 1rem;
+}
+
+.title{
+    text-align: left;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.newsCard{
+    height: 80px;
+    text-align: left;
     padding: 5px 10px;
-    background: #eee;
-    margin-top: 15px;
-    font-size: 0.7em;
+    background: white;
+    font-size: 12px;
+    border-bottom: 2px solid #ebeaed;
+}
+
+.date{
+    color: blue;
+    font-size: 10px;
 }

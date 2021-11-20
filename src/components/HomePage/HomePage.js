@@ -56,8 +56,8 @@ const HomePage = (props) => {
                 </div>
                 <input className={styles.searchBar} type="text" placeholder="Search News" value={input} onChange={(event)=>handleInputChange(event)}></input>
             </div>
-            <div className={styles.articlesContainer}>
-                <div className={styles.articlesColumn}>
+            <div className={styles.articlesColumn}>
+                <div className={styles.navigationHeader}>
                     <NavigationHeader title={props.title}></NavigationHeader>
                 </div>
                 <div>
@@ -85,7 +85,7 @@ const HomePage = (props) => {
                         })}
                     </div>
                 </div>
-                <div className={styles.articlesColumn3}>
+                <div className={styles.newsColumn}>
                     <div>
                         <InfiniteScroll data={props.data}></InfiniteScroll>
                     </div>
