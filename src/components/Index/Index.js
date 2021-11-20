@@ -7,6 +7,7 @@ import {
 
 import {endpoints} from '../../constants/constants'
 
+import ScrollToTop from '../ScrollToTop/ScrollToTop'
 import HomePage from '../HomePage/HomePage'
 import ArticlePage from '../ArticlePage/ArticlePage'
 import Loading from '../Loading/Loading'
@@ -18,10 +19,6 @@ const Index = () => {
     const [sportData, setSportData] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
-
-
-    //REACT_APP_API_KEY=847990084f024be1874072f906aba2df
-    
     
     const getData = async () => {
         try{
@@ -60,13 +57,13 @@ const Index = () => {
           <>
             <Router>
                 <Routes>
+
                     <Route exact path="/" element={isError ? <div>Check internet Connection</div> :
                         isLoading ? <Loading></Loading> :
                         <HomePage data={data} link="" title="Home"></HomePage>}>
                     </Route>
                     <Route path={"/:articleTitle"} element={isError ? <div>Check internet Connection</div> :
-                        isLoading ? <Loading></Loading> :
-                        <ArticlePage data={data}></ArticlePage>}>
+                        isLoading ? <Loading></Loading> : <ScrollToTop><ArticlePage data={data}></ArticlePage></ScrollToTop>}> 
                     </Route>
 
                     <Route exact path="/general" element={isError ? <div>Check internet Connection</div> :
@@ -75,8 +72,9 @@ const Index = () => {
                     </Route> 
                     <Route path={"/general/:articleTitle"} element={isError ? <div>Check internet Connection</div> :
                         isLoading ? <Loading></Loading> :
-                        <ArticlePage data={generalData}></ArticlePage>}>
+                        <ScrollToTop><ArticlePage data={generalData}></ArticlePage></ScrollToTop>}>
                     </Route>
+                    
                 </Routes>
             </Router>
           </>  
