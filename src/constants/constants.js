@@ -5,7 +5,7 @@ import activeGeneralIcon from '../data/images/GeneralActive.png'
 import businessIcon from '../data/images/Business.png'
 import healthIcon from '../data/images/Health.png'
 import scienceIcon from '../data/images/Science.png'
-import sportsIcon from '../data/images/Sports.png'
+import sportIcon from '../data/images/Sports.png'
 import technologyIcon from '../data/images/Technology.png'
 
 export const navTabs = [
@@ -14,7 +14,7 @@ export const navTabs = [
   {page: 'Business', link: '/business', icon: businessIcon, activeIcon: activeGeneralIcon},
   {page: 'Health', link: '/health', icon: healthIcon, activeIcon: activeGeneralIcon},
   {page: 'Science', link: '/science', icon: scienceIcon, activeIcon: activeGeneralIcon}, 
-  {page: 'Sports', link: '/sports', icon: sportsIcon, activeIcon: activeGeneralIcon}, 
+  {page: 'Sport', link: '/sport', icon: sportIcon, activeIcon: activeGeneralIcon}, 
   {page: 'Technology', link: '/technology', icon: technologyIcon, activeIcon: activeGeneralIcon}
 ]
 
@@ -25,7 +25,11 @@ export const navTabs = [
 export let endpoints = [
   'https://newsapi.org/v2/everything?q=Apple&from=2021-11-12&sortBy=popularity&apiKey=' + process.env.REACT_APP_API_KEY,
   'https://newsapi.org/v2/top-headlines?category=general&from=2021-11-12&sortBy=popularity&apiKey=' + process.env.REACT_APP_API_KEY,
-  'https://newsapi.org/v2/top-headlines?category=sport&from=2021-11-12&sortBy=popularity&apiKey=' + process.env.REACT_APP_API_KEY
+  'https://newsapi.org/v2/top-headlines?category=business&from=2021-11-12&sortBy=popularity&apiKey=' + process.env.REACT_APP_API_KEY,
+  'https://newsapi.org/v2/top-headlines?category=health&from=2021-11-12&sortBy=popularity&apiKey=' + process.env.REACT_APP_API_KEY,
+  'https://newsapi.org/v2/top-headlines?category=science&from=2021-11-12&sortBy=popularity&apiKey=' + process.env.REACT_APP_API_KEY,
+  'https://newsapi.org/v2/top-headlines?category=sport&from=2021-11-12&sortBy=popularity&apiKey=' + process.env.REACT_APP_API_KEY,
+  'https://newsapi.org/v2/top-headlines?category=technology&from=2021-11-12&sortBy=popularity&apiKey=' + process.env.REACT_APP_API_KEY
 ]
 
 //zbog

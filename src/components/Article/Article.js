@@ -1,17 +1,14 @@
 import React from 'react'
 import styles from './style.module.css'
 
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia'
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 const Article = (props) => {  
     return (
-          <div className={styles.container}>
+          <div className={styles.articleContainer}>
             <Card sx={{ minWidth: 275 }}>
                 <CardContent>
                     <Typography variant="h3" color="black" gutterBottom>

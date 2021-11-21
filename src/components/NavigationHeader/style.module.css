@@ -1,29 +1,29 @@
 .navigationBar {
-    display: flex;
-    flex-flow: column;
-  }
+  display: flex;
+  flex-flow: column;
+}
   
-  .navigationBar li {
-    list-style: none;
-    width: 5rem;
-    height: 5rem;
-    border-radius:10px
-  }
+.navigationBar li {
+  list-style: none;
+  width: 5rem;
+  height: 5rem;
+  border-radius:10px
+}
 
-  .navigationBar li:hover {
-    border: 1px solid #787a7a;
-    cursor: pointer;
-  }
+.navigationBar li:hover {
+  border: 1px solid #787a7a;
+  cursor: pointer;
+}
 
-  .link{
-    text-decoration: none;
-    width: 5rem;
-    height: 5rem;
-    padding-top: 0.5em;
-  }
+.link{
+  text-decoration: none;
+  width: 5rem;
+  height: 5rem;
+  padding-top: 0.5em;
+}
 
-  .img{
-    width: 5rem;
-    height: 5rem;
-    border-radius: 10px;
-  }
+.img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10px;
+}

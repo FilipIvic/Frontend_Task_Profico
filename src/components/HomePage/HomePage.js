@@ -47,7 +47,7 @@ const HomePage = (props) => {
 
 
     return (
-        <div className={styles.container}>
+        <div className={styles.homePagecontainer}>
             <div className={styles.headerContainer}>
                 <div className={styles.header}>
                     <Link to="/">
@@ -56,8 +56,8 @@ const HomePage = (props) => {
                 </div>
                 <input className={styles.searchBar} type="text" placeholder="Search News" value={input} onChange={(event)=>handleInputChange(event)}></input>
             </div>
-            <div className={styles.articlesColumn}>
-                <div className={styles.navigationHeader}>
+            <div className={styles.articlesContainer}>
+                <div className={styles.navigationColumn}>
                     <NavigationHeader title={props.title}></NavigationHeader>
                 </div>
                 <div>

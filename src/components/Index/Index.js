@@ -16,7 +16,11 @@ const Index = () => {
 
     const [data, setData] = useState([])
     const [generalData, setGeneralData] = useState([])
+    const [businessData, setBusinessData] = useState([])
+    const [healthData, setHealthData] = useState([])
+    const [scienceData, setScienceData] = useState([])
     const [sportData, setSportData] = useState([])
+    const [technologyData, setTechnologyData] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
     
@@ -24,16 +28,20 @@ const Index = () => {
         try{
             await axios.all(endpoints.map((endpoint) =>
                 axios.get(endpoint))).then(
-                    axios.spread((appleData, generalData, sportData) => {
+                    axios.spread((appleData, generalData, businessData, healthData, scienceData, sportData, technologyData) => {
                         //console.log({ appleData, generalData, sportData})
-                        const myData = appleData.data.articles.concat(generalData.data.articles).concat(sportData.data.articles)
+                        const myData = (appleData.data.articles.slice(0,4)).concat(generalData.data.articles.slice(0,4)).concat(businessData.data.articles.slice(0,4)).concat(healthData.data.articles.slice(0,4)).concat(scienceData.data.articles.slice(0,4)).concat(sportData.data.articles.slice(0,4)).concat(technologyData.data.articles.slice(0,4))
                         setData(sortByDate(myData))
                         setGeneralData(sortByDate(generalData.data.articles))
+                        setBusinessData(businessData.data.articles)
+                        setHealthData(healthData.data.articles)
+                        setScienceData(scienceData.data.articles)
                         setSportData(sortByDate(sportData.data.articles))
+                        setTechnologyData(technologyData.data.articles)
                         setIsLoading(false)
-                })
-            );
-        } catch (error) {
+                    })
+                )
+        }catch(error) {
             //console.log(error)
             setIsError(error)
         }
@@ -74,7 +82,51 @@ const Index = () => {
                         isLoading ? <Loading></Loading> :
                         <ScrollToTop><ArticlePage data={generalData}></ArticlePage></ScrollToTop>}>
                     </Route>
+
+                    <Route exact path="/business" element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <HomePage data={businessData} link="/business" title="Business"></HomePage>}>
+                    </Route> 
+                    <Route path={"/business/:articleTitle"} element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <ScrollToTop><ArticlePage data={businessData}></ArticlePage></ScrollToTop>}>
+                    </Route>
+
+                    <Route exact path="/health" element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <HomePage data={healthData} link="/health" title="Health"></HomePage>}>
+                    </Route> 
+                    <Route path={"/health/:articleTitle"} element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <ScrollToTop><ArticlePage data={healthData}></ArticlePage></ScrollToTop>}>
+                    </Route>
+
+                    <Route exact path="/science" element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <HomePage data={scienceData} link="/science" title="Science"></HomePage>}>
+                    </Route> 
+                    <Route path={"/science/:articleTitle"} element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <ScrollToTop><ArticlePage data={scienceData}></ArticlePage></ScrollToTop>}>
+                    </Route>
                     
+                    <Route exact path="/sport" element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <HomePage data={sportData} link="/sport" title="Sport"></HomePage>}>
+                    </Route> 
+                    <Route path={"/sport/:articleTitle"} element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <ScrollToTop><ArticlePage data={sportData}></ArticlePage></ScrollToTop>}>
+                    </Route>
+
+                    <Route exact path="/technology" element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <HomePage data={technologyData} link="/technology" title="Technology"></HomePage>}>
+                    </Route> 
+                    <Route path={"/technology/:articleTitle"} element={isError ? <div>Check internet Connection</div> :
+                        isLoading ? <Loading></Loading> :
+                        <ScrollToTop><ArticlePage data={technologyData}></ArticlePage></ScrollToTop>}>
+                    </Route>
                 </Routes>
             </Router>
           </>  
